@@ -109,7 +109,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col gap-1.5 mt-1">
-              <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Desde tu Celular</h4>
+              <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Desde tu Celular (A Nivel Nacional)</h4>
               <div className="grid grid-cols-3 gap-2 text-center text-[10px]">
                 <a href="tel:911" className="p-2 rounded-lg border border-border/60 bg-muted/20 hover:bg-muted/40 hover:text-primary transition-colors flex flex-col gap-0.5">
                   <span className="font-bold text-foreground">Movistar</span>
@@ -127,41 +127,141 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Col 2 & 3: Municipios de Caracas */}
-          <div className="lg:col-span-2 flex flex-col gap-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Números Locales (Área Metropolitana de Caracas)</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">Baruta:</span>
-                <a href="tel:02129444411" className="font-semibold text-primary hover:underline">0212-944.44.11</a>
-              </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">Sucre:</span>
-                <a href="tel:02122718190" className="font-semibold text-primary hover:underline">0212-271.81.90</a>
-              </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">Chacao:</span>
-                <a href="tel:02122679917" className="font-semibold text-primary hover:underline">0212-267.99.17</a>
-              </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">El Hatillo:</span>
-                <a href="tel:02129632211" className="font-semibold text-primary hover:underline">0212-963.22.11</a>
-              </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">Miranda:</span>
-                <div className="flex gap-2">
-                  <a href="tel:02123836152" className="font-semibold text-primary hover:underline">383.61.52</a>
-                  <span className="text-muted-foreground">/</span>
-                  <a href="tel:02123837849" className="font-semibold text-primary hover:underline">383.78.49</a>
+          {/* Col 2 & 3: Caracas y Carabobo */}
+          <div className="lg:col-span-2 flex flex-col gap-4">
+            {/* Caracas */}
+            <div className="flex flex-col gap-1.5">
+              <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Área Metropolitana de Caracas</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Baruta:</span>
+                  <a href="tel:02129444411" className="font-semibold text-primary hover:underline">0212 944 44 11</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Sucre:</span>
+                  <a href="tel:02122718190" className="font-semibold text-primary hover:underline">0212 271 81 90</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Chacao:</span>
+                  <a href="tel:02122679917" className="font-semibold text-primary hover:underline">0212 267 99 17</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">El Hatillo:</span>
+                  <a href="tel:02129632211" className="font-semibold text-primary hover:underline">0212 963 22 11</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Miranda:</span>
+                  <div className="flex gap-2">
+                    <a href="tel:02123836152" className="font-semibold text-primary hover:underline">0212 383 61 52</a>
+                    <span className="text-muted-foreground">/</span>
+                    <a href="tel:02123837849" className="font-semibold text-primary hover:underline">0212 383 78 49</a>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Libertador:</span>
+                  <a href="tel:02126313989" className="font-semibold text-primary hover:underline">0212 631 39 89</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10 sm:col-span-2">
+                  <span className="font-medium text-foreground">Distrito Capital:</span>
+                  <a href="tel:08002274825" className="font-semibold text-primary hover:underline">0800 227 48 25</a>
                 </div>
               </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10">
-                <span className="font-medium text-foreground">Libertador:</span>
-                <a href="tel:02126313989" className="font-semibold text-primary hover:underline">0212-631.39.89</a>
+            </div>
+
+            {/* Carabobo */}
+            <div className="flex flex-col gap-1.5 border-t border-border/60 pt-3">
+              <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Edo. Carabobo (Valencia y Costa)</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10 sm:col-span-2">
+                  <span className="font-medium text-foreground text-left">Proteccion Civil Carabobo:</span>
+                  <div className="flex gap-2">
+                    <a href="tel:02418592171" className="font-semibold text-primary hover:underline">0241 859 2171</a>
+                    <span className="text-muted-foreground">/</span>
+                    <a href="tel:02418593969" className="font-semibold text-primary hover:underline">859 3969</a>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Proteccion Civil Valencia:</span>
+                  <a href="tel:04128274252" className="font-semibold text-primary hover:underline">0412 827 4252</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                  <span className="font-medium text-foreground">Bomberos Pto. Cabello:</span>
+                  <a href="tel:02423620445" className="font-semibold text-primary hover:underline">0242 362 0445</a>
+                </div>
+                <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10 sm:col-span-2">
+                  <span className="font-medium text-foreground text-left">Bomberos Valencia:</span>
+                  <div className="flex gap-2 items-center flex-wrap">
+                    <a href="tel:04244739197" className="font-semibold text-primary hover:underline">0424 473 9197 <span className="text-[10px] text-muted-foreground font-normal">(Central)</span></a>
+                    <span className="text-muted-foreground">/</span>
+                    <a href="tel:02418387372" className="font-semibold text-primary hover:underline">0241 838 7372</a>
+                    <span className="text-muted-foreground">/</span>
+                    <a href="tel:02418320980" className="font-semibold text-primary hover:underline">832 0980</a>
+                  </div>
+                </div>
               </div>
-              <div className="flex justify-between items-center p-2.5 rounded-lg border border-border/40 hover:bg-muted/10 sm:col-span-2">
-                <span className="font-medium text-foreground">Distrito Capital:</span>
-                <a href="tel:08002274825" className="font-semibold text-primary hover:underline">0800-2274825</a>
+            </div>
+
+            {/* Aragua, Lara y Falcón */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-border/60 pt-3">
+              {/* Aragua */}
+              <div className="flex flex-col gap-1.5">
+                <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Edo. Aragua (Maracay)</h4>
+                <div className="flex flex-col gap-1.5 text-xs">
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground">Proteccion Civil Aragua:</span>
+                    <div className="flex gap-1 flex-col items-end">
+                      <a href="tel:02432474940" className="font-semibold text-primary hover:underline">0243 247 4940</a>
+                      <a href="tel:02432471778" className="font-semibold text-primary hover:underline">0243 247 1778</a>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground">Bomberos:</span>
+                    <a href="tel:02432351346" className="font-semibold text-primary hover:underline">0243 235 1346</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Lara */}
+              <div className="flex flex-col gap-1.5 border-t md:border-t-0 md:border-l border-border/60 pt-3 md:pt-0 md:pl-4">
+                <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Edo. Lara (Barquisimeto)</h4>
+                <div className="flex flex-col gap-1.5 text-xs">
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground text-left">Proteccion Civil Lara:</span>
+                    <div className="flex gap-1 flex-col items-end">
+                      <a href="tel:02512544889" className="font-semibold text-primary hover:underline">0251 254 4889</a>
+                      <a href="tel:02512543965" className="font-semibold text-primary hover:underline">0251 254 3965</a>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground text-left">Bomberos:</span>
+                    <div className="flex gap-1 flex-col items-end">
+                      <a href="tel:02512317475" className="font-semibold text-primary hover:underline">0251 231 7475</a>
+                      <a href="tel:02512319131" className="font-semibold text-primary hover:underline">0251 231 9131</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Falcón */}
+              <div className="flex flex-col gap-1.5 border-t md:border-t-0 md:border-l border-border/60 pt-3 md:pt-0 md:pl-4">
+                <h4 className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Edo. Falcón (Tucacas / Punto Fijo)</h4>
+                <div className="flex flex-col gap-1.5 text-xs">
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground text-left">Proteccion Civil Falcón:</span>
+                    <div className="flex gap-1 flex-col items-end">
+                      <a href="tel:02682524449" className="font-semibold text-primary hover:underline">0268 252 4449</a>
+                      <a href="tel:02684609422" className="font-semibold text-primary hover:underline">0268 460 9422</a>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground text-left">Bomberos Tucacas:</span>
+                    <a href="tel:02694145394" className="font-semibold text-primary hover:underline">0269 414 5394</a>
+                  </div>
+                  <div className="flex justify-between items-center p-2 rounded-lg border border-border/40 hover:bg-muted/10">
+                    <span className="font-medium text-foreground text-left">Bomberos Carirubana:</span>
+                    <a href="tel:02692458246" className="font-semibold text-primary hover:underline">0269 245 8246</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
