@@ -78,7 +78,7 @@ export function Footer() {
               Aviso Importante
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Este sitio es un esfuerzo colaborativo y de libre acceso. La información es provista por la comunidad y fuentes públicas. Verifique siempre con canales oficiales.
+              Este sitio es un esfuerzo colaborativo e independiente. <strong>No está asociado a ninguna institución gubernamental, organismo oficial ni ente del Estado.</strong> La información es provista de forma ciudadana por la comunidad. Verifique siempre con canales oficiales.
             </p>
           </div>
         </div>

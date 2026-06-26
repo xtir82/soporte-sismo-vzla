@@ -27,8 +27,19 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 flex flex-col gap-12">
+    <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 flex flex-col gap-8">
       
+      {/* Disclaimer de No-Afiliación */}
+      <div className="rounded-lg border border-amber-500/20 bg-amber-500/5 p-4 flex items-start gap-3 shadow-xs">
+        <ShieldAlert className="size-5 text-amber-600 dark:text-amber-500 shrink-0 mt-0.5" />
+        <div className="flex flex-col gap-1 font-sans">
+          <p className="text-xs font-semibold text-amber-800 dark:text-amber-400">Sitio de Iniciativa Ciudadana Independiente</p>
+          <p className="text-[11px] text-amber-700 dark:text-amber-500/90 leading-relaxed">
+            Este portal es de carácter estrictamente informativo y colaborativo. <strong>No está asociado, afiliado, patrocinado ni vinculado de ninguna forma a instituciones gubernamentales, ministerios ni ningún ente oficial del Estado venezolano.</strong> La información es recolectada y provista por voluntarios civiles y la propia comunidad.
+          </p>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden rounded-2xl border border-border bg-muted/20 p-6 sm:p-10 lg:p-12">
         <div className="absolute top-0 right-0 -z-10 size-96 bg-destructive/5 rounded-full blur-3xl" />
