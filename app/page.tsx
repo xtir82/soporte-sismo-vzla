@@ -291,7 +291,7 @@ export default function HomePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-sans">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-sans">
               {/* Card 1: Registro Ciudadano de Desaparecidos */}
               <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
                 <div className="flex flex-col gap-3">
@@ -314,7 +314,7 @@ export default function HomePage() {
                     rel="noopener noreferrer" 
                     className="inline-flex items-center justify-center gap-1"
                   >
-                    Consultar o Reportar
+                    Ir a la pagina
                     <ExternalLink className="size-3" />
                   </a>
                 </Button>
@@ -342,13 +342,41 @@ export default function HomePage() {
                     rel="noopener noreferrer" 
                     className="inline-flex items-center justify-center gap-1"
                   >
-                    Ingresar al Registro
+                    Ir a la pagina
                     <ExternalLink className="size-3" />
                   </a>
                 </Button>
               </div>
 
-              {/* Card 3: Listados de Hospitales y Refugios */}
+              {/* Card 3: Plataforma Hospitales en Venezuela */}
+              <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+                <div className="flex flex-col gap-3">
+                  <div className="flex gap-3">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                      <Search className="size-4.5" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="font-semibold text-foreground text-sm">Hospitales en Venezuela</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Buscador y base de datos alternativa para consultar de manera consolidada y unificada el listado de personas ingresadas en centros de salud.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Button asChild variant="default" size="sm" className="text-xs font-semibold w-full mt-2">
+                  <a 
+                    href="https://hospitalesenvenezuela.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center justify-center gap-1"
+                  >
+                    Ir a la pagina
+                    <ExternalLink className="size-3" />
+                  </a>
+                </Button>
+              </div>
+
+              {/* Card 4: Listados de Hospitales y Refugios (Interno) */}
               <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
                 <div className="flex flex-col gap-3">
                   <div className="flex gap-3">
