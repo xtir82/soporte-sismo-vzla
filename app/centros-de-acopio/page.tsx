@@ -27,7 +27,7 @@ export default function CentrosDeAcopioPage() {
       {/* Title */}
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-2">
-          <Building2 className="size-8 text-destructive" />
+          <Building2 className="size-8 text-primary" />
           Centros de Acopio
         </h1>
         <p className="text-base text-muted-foreground max-w-2xl">

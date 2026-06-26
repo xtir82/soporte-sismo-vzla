@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight transition-opacity hover:opacity-90">
-          <div className="flex size-9 items-center justify-center rounded-lg bg-destructive text-destructive-foreground">
+          <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <HeartHandshake className="size-5" />
           </div>
           <div className="flex flex-col">

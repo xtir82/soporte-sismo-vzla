@@ -20,7 +20,7 @@ export default function ContactoPage() {
       {/* Title */}
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-2">
-          <Mail className="size-8 text-destructive" />
+          <Mail className="size-8 text-primary" />
           Contacto y Colaboración
         </h1>
         <p className="text-base text-muted-foreground max-w-2xl">

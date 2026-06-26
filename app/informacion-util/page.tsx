@@ -45,8 +45,8 @@ export default function InformacionUtilPage() {
     {
       title: "Apoyo y Contención Psicológica",
       icon: Heart,
-      iconColor: "text-destructive",
-      bgColor: "bg-destructive/10",
+      iconColor: "text-primary",
+      bgColor: "bg-primary/10",
       tips: [
         "Es normal sentir miedo, ansiedad e hiperventilación. Respire profundamente por la nariz y exhale lento.",
         "Evite la sobreexposición a imágenes repetitivas del desastre en redes sociales.",
@@ -71,7 +71,7 @@ export default function InformacionUtilPage() {
       {/* Title */}
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-2">
-          <BookOpen className="size-8 text-destructive" />
+          <BookOpen className="size-8 text-primary" />
           Información Útil
         </h1>
         <p className="text-base text-muted-foreground max-w-2xl">
@@ -95,7 +95,7 @@ export default function InformacionUtilPage() {
                 <ul className="flex flex-col gap-2.5 text-xs text-muted-foreground">
                   {section.tips.map((tip, tipIdx) => (
                     <li key={tipIdx} className="flex gap-2 items-start leading-relaxed">
-                      <span className="mt-1 size-1.5 rounded-full bg-destructive shrink-0" />
+                      <span className="mt-1 size-1.5 rounded-full bg-primary shrink-0" />
                       <span>{tip}</span>
                     </li>
                   ))}
@@ -117,10 +117,10 @@ export default function InformacionUtilPage() {
           </p>
           <div className="flex flex-wrap gap-4 text-xs font-semibold text-foreground">
             <span className="inline-flex items-center gap-1">
-              📞 Cruz Roja Venezolana: <a href="tel:02125714444" className="text-destructive hover:underline">0212-5714444</a>
+              📞 Cruz Roja Venezolana: <a href="tel:02125714444" className="text-primary hover:underline">0212-5714444</a>
             </span>
             <span className="inline-flex items-center gap-1">
-              📞 FPV (Psicólogos): <a href="tel:02122396112" className="text-destructive hover:underline">0212-2396112</a>
+              📞 FPV (Psicólogos): <a href="tel:02122396112" className="text-primary hover:underline">0212-2396112</a>
             </span>
           </div>
         </CardContent>

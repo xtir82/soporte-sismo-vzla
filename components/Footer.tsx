@@ -10,7 +10,7 @@ export function Footer() {
           {/* Col 1: About */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-              <div className="flex size-8 items-center justify-center rounded-md bg-destructive text-destructive-foreground">
+              <div className="flex size-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <HeartHandshake className="size-4" />
               </div>
               <span className="text-base font-bold text-foreground">Soporte Sismo</span>

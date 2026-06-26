@@ -42,16 +42,16 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden rounded-2xl border border-border bg-muted/20 p-6 sm:p-10 lg:p-12">
-        <div className="absolute top-0 right-0 -z-10 size-96 bg-destructive/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 -z-10 size-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 -z-10 size-72 bg-amber-500/5 rounded-full blur-2xl" />
         
         <div className="flex flex-col gap-6 max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/10 px-3 py-1 text-xs font-semibold text-destructive">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
             <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive opacity-75"></span>
-              <span className="relative inline-flex rounded-full size-2 bg-destructive"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full size-2 bg-primary"></span>
             </span>
-            Portal de Emergencia Activo
+            Portal de Apoyo Activo
           </div>
           
           <h1 className="text-3xl/10 font-bold tracking-tight text-foreground sm:text-5xl/14">
@@ -61,9 +61,9 @@ export default function HomePage() {
           <p className="text-base/7 text-muted-foreground sm:text-lg/8">
             Plataforma abierta y ciudadana para facilitar la localización de personas, coordinar el acopio de suministros y proporcionar información verificada para las comunidades afectadas.
           </p>
-
+ 
           <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg" className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               <a href="#buscar-personas">
                 Encontrar Personas
                 <ArrowRight data-icon="inline-end" />
@@ -109,7 +109,7 @@ export default function HomePage() {
       <section id="buscar-personas" className="flex flex-col gap-6 scroll-mt-20">
         <div className="flex flex-col gap-2">
           <h2 className="text-xl/8 font-bold tracking-tight text-foreground sm:text-2xl/9 flex items-center gap-2">
-            <Search className="size-6 text-destructive" />
+            <Search className="size-6 text-primary" />
             Búsqueda y Reporte de Personas
           </h2>
           <p className="text-sm/6 text-muted-foreground max-w-2xl">
@@ -120,7 +120,7 @@ export default function HomePage() {
         <Card className="border-border bg-card shadow-sm">
           <CardHeader>
             <CardTitle className="text-lg font-bold flex items-center gap-2 font-sans">
-              <ClipboardList className="size-5 text-destructive" />
+              <ClipboardList className="size-5 text-primary" />
               Canales de Registro y Consulta de Personas
             </CardTitle>
             <CardDescription className="text-xs"> 
@@ -147,7 +147,7 @@ export default function HomePage() {
             <p className="text-xs text-muted-foreground leading-relaxed">
               Consulte la ubicación, horarios y tipos de insumos prioritarios requeridos (medicinas, alimentos no perecederos, agua, cobijas) en los puntos de recolección oficiales en todo el país.
             </p>
-            <Link href="/centros-de-acopio" className="text-xs font-semibold text-destructive hover:underline inline-flex items-center gap-1 mt-1">
+            <Link href="/centros-de-acopio" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-1">
               Ver lista de centros
               <ArrowRight className="size-3" />
             </Link>
@@ -164,7 +164,7 @@ export default function HomePage() {
             <p className="text-xs text-muted-foreground leading-relaxed">
               Instrucciones vitales sobre qué hacer después de un sismo, cómo evaluar grietas estructurales en hogares y números clave de apoyo psicológico e institucional.
             </p>
-            <Link href="/informacion-util" className="text-xs font-semibold text-destructive hover:underline inline-flex items-center gap-1 mt-1">
+            <Link href="/informacion-util" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-1">
               Leer guías de seguridad
               <ArrowRight className="size-3" />
             </Link>
