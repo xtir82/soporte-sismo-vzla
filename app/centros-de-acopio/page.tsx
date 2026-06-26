@@ -11,19 +11,19 @@ export default function CentrosDeAcopioPage() {
   const [activeTab, setActiveTab] = React.useState<"acopios" | "refugios">("acopios")
 
   const regions = [
-    { name: "Caracas - Distrito Capital", activePoints: 17, activeRefugios: 5 },
-    { name: "Mérida - Mérida", activePoints: 2, activeRefugios: 0 },
-    { name: "La Guaira - La Guaira", activePoints: 0, activeRefugios: 1 },
-    { name: "Valencia - Carabobo", activePoints: 2, activeRefugios: 0 },
-    { name: "Maracay - Aragua", activePoints: 2, activeRefugios: 0 },
-    { name: "Ciudad Bolívar - Bolívar", activePoints: 1, activeRefugios: 0 },
-    { name: "Barquisimeto - Lara", activePoints: 2, activeRefugios: 0 },
-    { name: "Anzoátegui", activePoints: 2, activeRefugios: 0 },
-    { name: "Miranda", activePoints: 1, activeRefugios: 0 },
-    { name: "Monagas", activePoints: 1, activeRefugios: 0 },
-    { name: "Táchira", activePoints: 1, activeRefugios: 0 },
-    { name: "Zulia", activePoints: 1, activeRefugios: 0 },
-    { name: "Falcón", activePoints: 1, activeRefugios: 0 },
+    { name: "Caracas - Distrito Capital", activePoints: 17, activeRefugios: 5, status: "Información verificada disponible" },
+    { name: "Mérida - Mérida", activePoints: 2, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "La Guaira - La Guaira", activePoints: 0, activeRefugios: 1, status: "Información verificada disponible" },
+    { name: "Valencia - Carabobo", activePoints: 2, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Maracay - Aragua", activePoints: 2, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Ciudad Bolívar - Bolívar", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Barquisimeto - Lara", activePoints: 2, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Anzoátegui", activePoints: 2, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Miranda", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Monagas", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Táchira", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Zulia", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "Falcón", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
   ]
 
   const caracasAcopios = [
@@ -248,6 +248,10 @@ export default function CentrosDeAcopioPage() {
             >
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-bold font-sans">{region.name}</CardTitle>
+                <CardDescription className="text-[11px] text-muted-foreground flex items-center gap-1 mt-1 font-sans">
+                  <MapPin className="size-3" />
+                  {region.status}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-[11px] text-muted-foreground border-t border-border/60 pt-3 flex flex-col gap-1 font-sans">
