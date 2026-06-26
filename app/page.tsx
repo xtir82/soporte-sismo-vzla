@@ -291,29 +291,83 @@ export default function HomePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 gap-4 font-sans">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
-                <div className="flex gap-4">
-                  <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
-                    <Search className="size-5" />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold text-foreground text-sm">Registro Ciudadano de Desaparecidos</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl">
-                      Quienes tengan familiares, amigos o allegados que se encuentren como "desaparecidos", pueden ingresar a este canal externo para consultar la base de datos o reportar a una persona que no haya sido ubicada.
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-sans">
+              {/* Card 1: Registro Ciudadano de Desaparecidos */}
+              <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+                <div className="flex flex-col gap-3">
+                  <div className="flex gap-3">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                      <Search className="size-4.5" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="font-semibold text-foreground text-sm">Registro Ciudadano de Desaparecidos</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Quienes tengan familiares, amigos o allegados que se encuentren como "desaparecidos", pueden ingresar a este canal externo para consultar la base de datos o reportar a una persona que no haya sido ubicada.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <Button asChild variant="default" size="sm" className="text-xs font-semibold shrink-0 w-full md:w-auto">
+                <Button asChild variant="default" size="sm" className="text-xs font-semibold w-full mt-2">
                   <a 
                     href="https://desaparecidosterremotovenezuela.com" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex items-center gap-1"
+                    className="inline-flex items-center justify-center gap-1"
                   >
                     Consultar o Reportar
                     <ExternalLink className="size-3" />
                   </a>
+                </Button>
+              </div>
+
+              {/* Card 2: Venezuela Te Busca */}
+              <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+                <div className="flex flex-col gap-3">
+                  <div className="flex gap-3">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                      <Search className="size-4.5" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="font-semibold text-foreground text-sm">Venezuela Te Busca</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Plataforma ciudadana alternativa para el registro, consulta y rastreo de personas reportadas como no ubicadas tras el sismo de 2026.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Button asChild variant="default" size="sm" className="text-xs font-semibold w-full mt-2">
+                  <a 
+                    href="https://venezuelatebusca.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center justify-center gap-1"
+                  >
+                    Ingresar al Registro
+                    <ExternalLink className="size-3" />
+                  </a>
+                </Button>
+              </div>
+
+              {/* Card 3: Listados de Hospitales y Refugios */}
+              <div className="flex flex-col justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+                <div className="flex flex-col gap-3">
+                  <div className="flex gap-3">
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                      <ClipboardList className="size-4.5" />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="font-semibold text-foreground text-sm">Listados de Hospitales</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Consulte los listados oficiales de personas ingresadas en centros médicos (Luciani, Pérez Carreño, UCV, Vargas) y refugios como Playa Los Cocos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <Button asChild variant="outline" size="sm" className="text-xs font-semibold w-full mt-2">
+                  <Link href="/encontrar-personas" className="inline-flex items-center justify-center gap-1">
+                    Ver Todos los Listados
+                    <ArrowRight className="size-3" />
+                  </Link>
                 </Button>
               </div>
             </div>
