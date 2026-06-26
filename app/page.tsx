@@ -424,7 +424,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Caracas Ayuda */}
           <div className="flex gap-4 p-5 rounded-xl border border-border bg-card hover:shadow-xs transition-shadow">
             <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
@@ -464,6 +464,28 @@ export default function HomePage() {
                 className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-2 w-fit"
               >
                 Visitar sos.yummyrides.com
+                <ExternalLink className="size-3" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 3: Red Ayuda Venezuela */}
+          <div className="flex gap-4 p-5 rounded-xl border border-border bg-card hover:shadow-xs transition-shadow">
+            <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+              <HeartHandshake className="size-5" />
+            </div>
+            <div className="flex flex-col gap-1 font-sans">
+              <h3 className="font-semibold text-foreground text-base">Red Ayuda Venezuela</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Red civil humanitaria que consolida solicitudes de donaciones, logística de distribución y apoyo voluntario para comunidades afectadas.
+              </p>
+              <a 
+                href="https://redayudavenezuela.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-2 w-fit"
+              >
+                Visitar redayudavenezuela.com
                 <ExternalLink className="size-3" />
               </a>
             </div>

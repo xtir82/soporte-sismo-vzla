@@ -155,6 +155,11 @@ export default function EncontrarPersonasPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
               {[
                 {
+                  name: "Plataforma Hospitales en Venezuela",
+                  desc: "Buscador y base de datos consolidada para consultar de manera unificada el listado de personas ingresadas.",
+                  url: "https://hospitalesenvenezuela.com/"
+                },
+                {
                   name: "Hospital Domingo Luciani",
                   desc: "Lista de pacientes y personas ingresadas en este centro médico de El Llanito.",
                   url: "https://drive.google.com/drive/u/0/folders/1womt9b3TSngAE31YoYSWowYY930rZPkZ?fbclid=PAb21jcASqrAdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAac4L3rKU_GctOdf9gLptAEIYmqXUH3nOphrq2FM02bx0vizjeDRNEPB_Gfg8w_aem_uYaw0qD4G6y0Y8NtQLyfjQ"
@@ -192,7 +197,7 @@ export default function EncontrarPersonasPage() {
                       rel="noopener noreferrer" 
                       className="inline-flex items-center justify-center gap-1"
                     >
-                      Ver Lista en Drive
+                      {item.url.includes("drive.google.com") ? "Ver Lista en Drive" : "Abrir Plataforma"}
                       <ExternalLink className="size-3" />
                     </a>
                   </Button>
