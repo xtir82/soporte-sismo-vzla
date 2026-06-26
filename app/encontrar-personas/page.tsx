@@ -40,8 +40,44 @@ export default function EncontrarPersonasPage() {
           </div>
         </CardContent>
       </Card>
-
-
+      {/* Registration/Consultation Card */}
+      <Card className="border-border bg-card shadow-xs">
+        <CardHeader>
+          <CardTitle className="text-lg font-bold flex items-center gap-2 font-sans">
+            <ClipboardList className="size-5 text-primary" />
+            Canales de Registro y Consulta de Personas
+          </CardTitle>
+          <CardDescription className="text-xs">
+            Seleccione una opción para registrar información o buscar en los listados coordinados por la comunidad.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="pt-2">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+            <div className="flex gap-4">
+              <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+                <Search className="size-5" />
+              </div>
+              <div className="flex flex-col gap-1 font-sans">
+                <h3 className="font-semibold text-foreground text-sm">Registro Ciudadano de Desaparecidos</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl">
+                  Quienes tengan familiares, amigos o allegados que se encuentren como "desaparecidos", pueden ingresar a este canal externo para consultar la base de datos o reportar a una persona que no haya sido ubicada.
+                </p>
+              </div>
+            </div>
+            <Button asChild variant="default" size="sm" className="text-xs font-semibold shrink-0 w-full md:w-auto">
+              <a 
+                href="https://desaparecidosterremotovenezuela.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-1"
+              >
+                Consultar o Reportar
+                <ExternalLink className="size-3" />
+              </a>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   )
 }
