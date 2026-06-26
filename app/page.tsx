@@ -335,6 +335,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* External Portals & Useful Links Section */}
+      <section className="flex flex-col gap-6 pt-4 border-t border-border">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-xl/8 font-bold tracking-tight text-foreground sm:text-2xl/9 flex items-center gap-2">
+            <ExternalLink className="size-6 text-primary" />
+            Portales de Apoyo y Enlaces de Interés
+          </h2>
+          <p className="text-sm/6 text-muted-foreground max-w-2xl">
+            Iniciativas civiles y herramientas externas aliadas brindando soporte durante la contingencia sísmica.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Card 1: Caracas Ayuda */}
+          <div className="flex gap-4 p-5 rounded-xl border border-border bg-card hover:shadow-xs transition-shadow">
+            <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+              <HeartHandshake className="size-5" />
+            </div>
+            <div className="flex flex-col gap-1 font-sans">
+              <h3 className="font-semibold text-foreground text-base">Caracas Ayuda</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Plataforma de mapeo y coordinación ciudadana para canalizar solicitudes de auxilio, apoyo logístico e iniciativas de voluntariado.
+              </p>
+              <a 
+                href="https://caracasayuda.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-2 w-fit"
+              >
+                Visitar caracasayuda.com
+                <ExternalLink className="size-3" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 2: SOS Yummy Rides */}
+          <div className="flex gap-4 p-5 rounded-xl border border-border bg-card hover:shadow-xs transition-shadow">
+            <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+              <PhoneCall className="size-5" />
+            </div>
+            <div className="flex flex-col gap-1 font-sans">
+              <h3 className="font-semibold text-foreground text-base">Yummy Rides SOS</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Canal de soporte especial para la coordinación de traslados de emergencia y asistencia de movilidad logística en zonas críticas.
+              </p>
+              <a 
+                href="https://sos.yummyrides.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-2 w-fit"
+              >
+                Visitar sos.yummyrides.com
+                <ExternalLink className="size-3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Information Banner (Verification and Community effort) */}
       <section className="rounded-xl bg-muted/40 p-4 border border-border/60 flex gap-3 items-start">
         <Info className="size-5 text-amber-500 shrink-0 mt-0.5" />

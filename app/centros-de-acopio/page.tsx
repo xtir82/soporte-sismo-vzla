@@ -12,6 +12,8 @@ export default function CentrosDeAcopioPage() {
 
   const regions = [
     { name: "Caracas - Distrito Capital", activePoints: 16, activeRefugios: 5, status: "Información verificada disponible" },
+    { name: "Mérida - Mérida", activePoints: 1, activeRefugios: 0, status: "Información verificada disponible" },
+    { name: "La Guaira - La Guaira", activePoints: 0, activeRefugios: 1, status: "Información verificada disponible" },
     { name: "Valencia - Carabobo", activePoints: 0, activeRefugios: 0, status: "En preparación - Mapeando ubicaciones" },
     { name: "Maracay - Aragua", activePoints: 0, activeRefugios: 0, status: "En preparación - Mapeando ubicaciones" },
     { name: "Barquisimeto - Lara", activePoints: 0, activeRefugios: 0, status: "En preparación - Mapeando ubicaciones" },
@@ -36,6 +38,10 @@ export default function CentrosDeAcopioPage() {
     "Supermercado Páramo (Cualquier sucursal)"
   ]
 
+  const meridaAcopios = [
+    "Municipio Alberto Adriani: Entrada del Primero de Mayo, sector La Gallera. Atendido por la parroquia Rómulo Gallegos. Horario: Viernes 11:00 am a 7:00 pm; Sábado y domingo desde las 8:00 am. Reciben: Agua potable, alimentos no perecederos, insumos médicos, ropa y abrigos."
+  ]
+
   const caracasRefugios = [
     "U.E.N. Francisco Pimentel - Quinta Crespo",
     "U.E.N. Gran Colombia - Av. Roosevelt, El Cementerio",
@@ -44,12 +50,31 @@ export default function CentrosDeAcopioPage() {
     "Parque Generalísimo Francisco de Miranda (Parque del Este) - Miranda"
   ]
 
+  const laGuairaRefugios = [
+    "Estadio Jorge Luis García Carneiro"
+  ]
+
+  const normalizeStr = (str: string) => {
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+  }
+
   const filteredAcopios = caracasAcopios.filter(item =>
-    item.toLowerCase().includes(searchQuery.toLowerCase())
+    normalizeStr(item).includes(normalizeStr(searchQuery))
+  )
+
+  const filteredMeridaAcopios = meridaAcopios.filter(item =>
+    normalizeStr(item).includes(normalizeStr(searchQuery))
   )
 
   const filteredRefugios = caracasRefugios.filter(item =>
-    item.toLowerCase().includes(searchQuery.toLowerCase())
+    normalizeStr(item).includes(normalizeStr(searchQuery))
+  )
+
+  const filteredLaGuairaRefugios = laGuairaRefugios.filter(item =>
+    normalizeStr(item).includes(normalizeStr(searchQuery))
   )
 
   return (
@@ -125,7 +150,7 @@ export default function CentrosDeAcopioPage() {
             className="text-xs font-semibold"
           >
             <Building2 className="size-4" />
-            Centros de Acopio (Caracas)
+            Centros de Acopio
           </Button>
           <Button 
             variant={activeTab === "refugios" ? "default" : "outline"}
@@ -134,7 +159,7 @@ export default function CentrosDeAcopioPage() {
             className="text-xs font-semibold"
           >
             <Home className="size-4" />
-            Refugios Habilitados (Caracas)
+            Refugios Habilitados
           </Button>
         </div>
 
@@ -150,7 +175,7 @@ export default function CentrosDeAcopioPage() {
         </div>
       </div>
 
-      {/* Caracas Detailed Lists */}
+      {/* Detailed Lists */}
       <Card className="border-border bg-card">
         <CardHeader className="pb-2">
           <CardTitle className="text-base font-bold flex items-center gap-2 font-sans">
@@ -167,35 +192,126 @@ export default function CentrosDeAcopioPage() {
             )}
           </CardTitle>
           <CardDescription className="text-xs font-sans">
-            Ubicaciones oficiales recolectando insumos prioritarios o prestando albergue en el Distrito Capital y zonas metropolitanas.
+            Ubicaciones oficiales recolectando insumos prioritarios o prestando albergue temporal a los afectados.
           </CardDescription>
         </CardHeader>
         <CardContent className="pt-4">
           {activeTab === "acopios" ? (
-            filteredAcopios.length > 0 ? (
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {filteredAcopios.map((item, idx) => (
-                  <li key={idx} className="flex gap-2.5 p-3 rounded-lg border border-border bg-muted/20 items-start hover:bg-muted/30 transition-colors">
-                    <ShieldCheck className="size-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-xs text-foreground/90 font-medium leading-relaxed font-sans">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            (filteredAcopios.length > 0 || filteredMeridaAcopios.length > 0) ? (
+              <div className="flex flex-col gap-6">
+                {/* Caracas Acopios */}
+                {filteredAcopios.length > 0 && (
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-sans">
+                      <MapPin className="size-3 text-primary" /> Caracas - Distrito Capital
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {filteredAcopios.map((item, idx) => (
+                        <li key={idx} className="flex gap-2.5 p-3 rounded-lg border border-border bg-muted/20 items-start hover:bg-muted/30 transition-colors">
+                          <ShieldCheck className="size-4 text-emerald-500 shrink-0 mt-0.5" />
+                          <span className="text-xs text-foreground/90 font-medium leading-relaxed font-sans">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Mérida Acopios */}
+                {filteredMeridaAcopios.length > 0 && (
+                  <div className="flex flex-col gap-3 border-t border-border/60 pt-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-sans">
+                      <MapPin className="size-3 text-primary" /> Mérida - Mérida
+                    </h4>
+                    <div className="grid grid-cols-1 gap-4">
+                      <div className="flex flex-col md:flex-row gap-4 p-5 rounded-xl border border-border bg-muted/10 hover:bg-muted/20 transition-colors">
+                        <div className="flex size-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 shrink-0">
+                          <ShieldCheck className="size-6" />
+                        </div>
+                        <div className="flex flex-col gap-3 w-full font-sans">
+                          <div>
+                            <div className="flex flex-wrap items-center gap-2 mb-1">
+                              <h3 className="font-bold text-foreground text-sm">Centro de Acopio Parroquial</h3>
+                              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-500">
+                                Verificado
+                              </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                              <strong className="text-foreground">Municipio:</strong> Alberto Adriani
+                            </p>
+                          </div>
+                          
+                          <div className="text-xs text-foreground/90 leading-relaxed">
+                            <strong className="text-foreground block mb-0.5">Ubicación:</strong>
+                            Entrada del Primero de Mayo, sector La Gallera, con la atención de los compañeros de la parroquia Rómulo Gallegos.
+                          </div>
+
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2 border-t border-border/60">
+                            <div>
+                              <strong className="text-foreground block mb-1">Horario de Recepción:</strong>
+                              <ul className="list-disc pl-4 space-y-0.5 text-muted-foreground text-[11px]">
+                                <li><strong className="text-foreground/80">Viernes:</strong> 11:00 a. m. a 7:00 p. m.</li>
+                                <li><strong className="text-foreground/80">Sábado y Domingo:</strong> a partir de las 8:00 a. m.</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <strong className="text-foreground block mb-1.5">Insumos Solicitados:</strong>
+                              <div className="flex flex-wrap gap-1.5">
+                                {["Agua Potable", "Alimentos no Perecederos", "Insumos Médicos", "Ropa y Abrigos"].map((tag, idx) => (
+                                  <span key={idx} className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-medium">
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             ) : (
-              <p className="text-xs text-muted-foreground text-center py-6">No se encontraron centros de acopio que coincidan con la búsqueda.</p>
+              <p className="text-xs text-muted-foreground text-center py-6 font-sans">No se encontraron centros de acopio que coincidan con la búsqueda.</p>
             )
           ) : (
-            filteredRefugios.length > 0 ? (
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {filteredRefugios.map((item, idx) => (
-                  <li key={idx} className="flex gap-2.5 p-3 rounded-lg border border-border bg-muted/20 items-start hover:bg-muted/30 transition-colors">
-                    <Home className="size-4 text-primary shrink-0 mt-0.5" />
-                    <span className="text-xs text-foreground/90 font-medium leading-relaxed font-sans">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            (filteredRefugios.length > 0 || filteredLaGuairaRefugios.length > 0) ? (
+              <div className="flex flex-col gap-6">
+                {/* Caracas Refugios */}
+                {filteredRefugios.length > 0 && (
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-sans">
+                      <MapPin className="size-3 text-primary" /> Caracas - Distrito Capital
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {filteredRefugios.map((item, idx) => (
+                        <li key={idx} className="flex gap-2.5 p-3 rounded-lg border border-border bg-muted/20 items-start hover:bg-muted/30 transition-colors">
+                          <Home className="size-4 text-primary shrink-0 mt-0.5" />
+                          <span className="text-xs text-foreground/90 font-medium leading-relaxed font-sans">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* La Guaira Refugios */}
+                {filteredLaGuairaRefugios.length > 0 && (
+                  <div className="flex flex-col gap-2 border-t border-border/60 pt-4">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-sans">
+                      <MapPin className="size-3 text-primary" /> La Guaira -La Guaira
+                    </h4>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {filteredLaGuairaRefugios.map((item, idx) => (
+                        <li key={idx} className="flex gap-2.5 p-3 rounded-lg border border-border bg-muted/20 items-start hover:bg-muted/30 transition-colors">
+                          <Home className="size-4 text-primary shrink-0 mt-0.5" />
+                          <span className="text-xs text-foreground/90 font-medium leading-relaxed font-sans">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             ) : (
-              <p className="text-xs text-muted-foreground text-center py-6">No se encontraron refugios que coincidan con la búsqueda.</p>
+              <p className="text-xs text-muted-foreground text-center py-6 font-sans">No se encontraron refugios que coincidan con la búsqueda.</p>
             )
           )}
         </CardContent>
