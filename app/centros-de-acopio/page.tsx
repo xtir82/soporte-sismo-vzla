@@ -1,7 +1,5 @@
 "use client"
 
-"use client"
-
 import * as React from "react"
 import Link from "next/link"
 import { Building2, Search, MapPin, AlertCircle, ArrowLeft, Home, ShieldCheck } from "lucide-react"
